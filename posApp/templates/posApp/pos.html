@@ -23,12 +23,19 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-5 col-md-12">
+                    <style>
+                        .hidden {
+                            display: none;
+                        }
+                    </style>
+                    
+                    <div class="col-lg-3 col-md-5 col-md-12 hidden">
                         <div class="form-group mb-3">
                             <label for="product-qty">Qty</label>
                             <input type="number" class="form-control form-control-sm text-center" step="any" id="product-qty" value="1">
                         </div>
                     </div>
+                    
                     <div class="col-lg-4 col-md-2 col-md-12">
                         <div class="form-group mb-3">
                             <button class="btn btn-light btn-sm bg-gradient border rounded-0 text-start" type="button" id="add_item"><i class="mdi mdi-plus"></i> Add Item</button>
@@ -38,18 +45,18 @@
                 </div>
             </fieldset>
             <fieldset>
-                <div class="d-flex w-100" id="POS-field">
-                    <div class="col-8 bg-gradient bg-light border h-100">
+                <div class="d-flex w-70" id="POS-field">
+                    <div class="col-8 bg-gradient bg-light border h-10">
                         <table class="table table-bordered">
                             <colgroup>
                                 <col width="5%">
                                 <col width="15%">
-                                <col width="40%">
                                 <col width="20%">
-                                <col width="20%">
+                                <col width="10%">
+                                <col width="10%">
                             </colgroup>
                             <thead>
-                                <tr class="bg-dark bg-gradient bg-opacity-50 text-light">
+                                <tr class="col-4 bg-success bg-opacity-50 border h-50">
                                     <th class="py-1 px-2 text-center  text-light"></th>
                                     <th class="py-1 px-2 text-center  text-light">QTY</th>
                                     <th class="py-1 px-2 text-center  text-light">Product</th>
@@ -61,7 +68,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="col-4 bg-gradient bg-dark blue bg-opacity-50 border h-100">
+                    <div class="col-4 bg-success bg-opacity-50 border h-50">
                         <div class="col-12 py-4 px-2">
                             <dl>
                                 <dt class="h4 fw-bold text-light">Sub Total</dt>
@@ -69,15 +76,25 @@
                                     <input type="hidden" name="sub_total" value="0">
                                     <span class="h3 fw-bold" id="sub_total">0.00</span>
                                 </dd>
-                                <dt class="h4 fw-bold text-light">Tax Inclusive (%)</dt>
-                                <dd>
-                                <input type="number" class="form-control form-control-lg rounded-0 text-end" step="any" min="0" max="100" name="tax" value="0">
-                                </dd>
-                                <dt class="h4 fw-bold text-light">Tax Amount</dt>
-                                <dd class="text-end py-1 px-2 rounded-0 bg-light">
-                                    <input type="hidden" name="tax_amount" value="0">
-                                    <span class="h3 fw-bold" id="tax_amount">0.00</span>
-                                </dd>
+                                <style>
+                                    .hidden {
+                                        display: none;
+                                    }
+                                </style>
+                                
+                                <dl>
+                                    <dt class="h4 fw-bold text-light hidden">Tax Inclusive (%)</dt>
+                                    <dd class="hidden">
+                                        <input type="number" class="form-control form-control-lg rounded-0 text-end" step="any" min="0" max="100" name="tax" value="0">
+                                    </dd>
+                                
+                                    <dt class="h4 fw-bold text-light hidden">Tax Amount</dt>
+                                    <dd class="text-end py-1 px-2 rounded-0 bg-light hidden">
+                                        <input type="hidden" name="tax_amount" value="0">
+                                        <span class="h3 fw-bold" id="tax_amount">0.00</span>
+                                    </dd>
+                                </dl>
+                                
                                 <dt class="h4 fw-bold text-light">Grand Total</dt>
                                 <dd class="text-end py-1 px-2 rounded-0 bg-light">
                                     <input type="hidden" name="grand_total" value="0">
@@ -93,9 +110,12 @@
                 </div>
             </fieldset>
             <div class="row">
-                <div class="col-md-12 text-end">
-                    <button class="btn btn-primary btn-sm rounded-0" type="button" id="check_out"><i class="mdi mdi-save"></i> Checkout</button>
+                <div class="col-md-20 text-end">
+                    <button class="btn btn-lg btn-success rounded-200" type="button" id="check_out">
+                        <i class="mdi mdi-save"></i> Checkout
+                    </button>
                 </div>
+                
             </div>
         </form>
     </div>
