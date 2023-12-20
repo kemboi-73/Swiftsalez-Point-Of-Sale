@@ -1,0 +1,130 @@
+{% extends "posApp/base.html" %}
+{% load humanize %}
+{% block pageContent %}
+<style>
+     body {
+        font-family: 'Arial', sans-serif;
+        margin: 100;
+        padding: 0;
+        background-color: #f2f2f2;
+    } 
+     .container {
+        max-width: 1200px; /* Adjust the max-width as needed */
+        margin: 100; /* This centers the container */
+    } 
+    header {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    nav ul li {
+        margin-right: 20px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    nav ul li a:hover {
+        color: #ff6600;
+    }
+    .hero {
+        text-align: center;
+        padding: 80px 0;
+        background-color: #ff6600;
+        color: #fff;
+    }
+    .hero h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+    .hero p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+    .btn {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #ff6600;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    .btn:hover {
+        background-color: #ff8533;
+        color: #fff;
+    }
+    .features {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 0;
+        background-color: #fff;
+    }
+    .feature {
+        text-align: center;
+        padding: 30px;
+    }
+    .feature h2 {
+        margin-bottom: 15px;
+        color: #333;
+    }
+    .feature p {
+        color: #666;
+    }
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #333;
+        color: #fff;
+    }
+</style>
+
+<div class="container">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Swiftsalez.com</h1>
+        <p>Your one-stop solution for managing sales efficiently.</p>
+        <a href="#" class="btn">Get Started</a>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h2>Easy-to-use Interface</h2>
+            <p>Simplify your sales process with an intuitive interface.</p>
+        </div>
+        <div class="feature">
+            <h2>Real-time Analytics</h2>
+            <p>Track sales and performance instantly for informed decisions.</p>
+        </div>
+        <div class="feature">
+            <h2>Secure Transactions</h2>
+            <p>Ensure secure payments and transactions for your business.</p>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2023 Swiftsalez.com All rights reserved.</p>
+</footer>
+
+{% endblock pageContent %}
