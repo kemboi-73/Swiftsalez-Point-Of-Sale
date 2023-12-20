@@ -90,21 +90,11 @@
     }
 </style>
 
-<div class="container">
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
     <section class="hero">
         <h1>Welcome to Swiftsalez.com</h1>
         <p>Your one-stop solution for managing sales efficiently.</p>
-        <a href="#" class="btn">Get Started</a>
+        <a href="{% url "product-page" %}" class="btn">Get Started</a>
     </section>
 
     <section class="features">
@@ -123,8 +113,6 @@
     </section>
 </div>
 
-<footer>
-    <p>&copy; 2023 Swiftsalez.com All rights reserved.</p>
-</footer>
+
 
 {% endblock pageContent %}
